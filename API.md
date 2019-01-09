@@ -40,16 +40,38 @@ This is a POST request as well
 
 ## Finally the last route is `http://localhost:3000/getreport`
 
-This route is responsible for returning a report of the video in addition to how many reports the video has. It has a required parameter of `{videoid:int}` and an additional optional parameter of `{date:YYYY-MM-DD}`. The datae parameter must be in the YYYY-MM-DD format, so for January 8th 2019 you would enter `2019-01-08`.
+This route is responsible for returning a report of the video in addition to how many reports the video has. It has a required parameter of `{videoid:int}` and an additional optional parameter of `{date:YYYY-MM-DD}`. The date parameter is used to only count views that occur on or after the given date and itself must be in the YYYY-MM-DD format, so for January 8th 2019 you would enter `2019-01-08`.
 
 An example API call can look like either 
 
 `http://localhost:3000/getreport/1`
 
+which would return 
+
+`[
+    {
+        "name": "Victor",
+        "brand": "Youtube",
+        "published": "2018-05-08T04:00:00.000Z",
+        "count": 4
+    }
+]`
+
 or
 
-`http://localhost:3000/getreport/1/2019-01-08`
+`http://localhost:3000/getreport/1/2003-01-01`
 
-This is a GET Request and it returns an object structured like the following 
+which would return 
+
+`[
+    {
+        "name": "Victor",
+        "brand": "Youtube",
+        "published": "2018-05-08T04:00:00.000Z",
+        "count": 3
+    }
+]`
+
+
 
 
