@@ -11,7 +11,7 @@ This API has four routes
  
  ***
 
-## The next route `http://localhost:3000/createVideo/`
+## The next route `http://localhost:3000/createvideo/`
 
 This route is responsible for creating videos and requires the following parameters
 `{name:'', brand:'',year:'', month:'', day:''}`
