@@ -1,5 +1,5 @@
 # MySQL-RESTAPI
-REST API using mySQL and Express as a coding challenge I was given 
+REST API using MySQL,Node and Express as a coding challenge I was given 
 
 
 # Instructions for installing
